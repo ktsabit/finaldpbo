@@ -7,7 +7,6 @@ namespace Finaldpbo {
         private unowned Gtk.Text input;
 
         construct {
-            button.set_size_request(10, 10); // Set the width to 100 pixels and height to 50 pixels
             button.width_request = 200;
         }
 

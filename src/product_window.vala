@@ -24,7 +24,7 @@ namespace Finaldpbo {
         [GtkChild]
         private unowned Gtk.Label berat_rata_sample;
         [GtkChild]
-        private unowned Gtk.Image img;
+        private unowned Gtk.Box imgBox;
 
 
         construct {
@@ -48,6 +48,7 @@ namespace Finaldpbo {
             string str = generator.to_data (null);
             string res = sendHTTPrequest (str, "http://angkit.ktsabit.com/getBatch", "POST", "application/json");
             
+            print(res);
             Batch batch = jsonParse (res);
             
             if (batch.id == null) {
@@ -116,9 +117,17 @@ namespace Finaldpbo {
                 berat_rata_sample.set_text (batch.berat_rt_sample.to_string());
             }
 
-            File imageFile = getImage (batch.images.get (0));
-            img.set_from_file (imageFile.get_path ());
-            img.height_request = 500;
+            foreach (var image in batch.images) {
+                File imageFile = getImage(image);
+                print("%s\n",imageFile.get_path());
+                print("%s\n",image);
+                Gtk.Image img = new Gtk.Image.from_file (imageFile.get_path());
+                img.set_hexpand (true);
+                img.height_request = 340;
+                imgBox.append (img);
+
+            }
+
         }
     }
 }

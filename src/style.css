@@ -2,7 +2,11 @@
     /* color: aqua; */
     margin-bottom: 5px;
 }
+#inp {
+    margin-bottom: 5px;
+    margin-top: 5px;
 
+}
 .title {
     font-size: 2rem;
 }
@@ -18,7 +22,7 @@
 }
 
 .swin {
-  margin: 30px;
+  padding: 30px;
 }
 
 .data-title {
