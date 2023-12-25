@@ -9,6 +9,7 @@
         <child>
           <object class="GtkGrid" id="mainGrid">
             <property name="column-homogeneous">true</property>
+            <property name="row-homogeneous">true</property>
             <child>
               <object class="GtkBox">
                 <property name="orientation">vertical</property>
@@ -50,6 +51,29 @@
                 </child>
                 <layout>
                   <property name="column">1</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label">Spesies</property>
+                    <style>
+                      <class name="data-title" />
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="spesies">
+                    <property name="label">hallo</property>
+                  </object>
+                </child>
+                <layout>
+                  <property name="column">3</property>
                   <property name="row">0</property>
                 </layout>
               </object>
