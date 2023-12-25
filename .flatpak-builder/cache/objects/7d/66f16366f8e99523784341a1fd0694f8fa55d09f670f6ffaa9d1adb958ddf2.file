@@ -1,0 +1,4 @@
+[Application]
+name=com.ktsabit.finaldpbo
+runtime=org.gnome.Sdk/x86_64/45
+sdk=org.gnome.Sdk/x86_64/45

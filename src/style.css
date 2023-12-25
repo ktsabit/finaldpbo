@@ -1,0 +1,19 @@
+.inputBar {
+    color: aqua;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.iconLogo {
+    width: 2rem;
+    font-size: 5rem;
+    min-width: 10rem;
+    min-height: 10rem;
+    height: 2rem;
+}
+
+.buttonInput {
+    min-width: 1rem;
+}

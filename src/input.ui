@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <template class="FinaldpboInput_Window" parent="GtkApplicationWindow">
+    <property name="default-width">600</property>
+    <property name="default-height">300</property>
+    <property name="child">
+      <object class="GtkScrolledWindow" id="mainGrid">
+        <child>
+            <object class="GtkBox" id="mainBox">
+            <property name="orientation">vertical</property>
+            <property name="baseline-position">GTK_BASELINE_POSITION_CENTER</property>
+            <property name="vexpand">true</property>
+            <property name="valign">GTK_ALIGN_CENTER</property>
+            <child>
+              <object class="GtkImage">
+                <property name="file">/home/juned/Ned Files/Projects/finaldpbo/src/angkit.png</property>
+                <property name="pixel-size">140</property>
+                <style>
+                  <class name="logoIcon"/>
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label">
+                <property name="label">Input Product ID</property>
+                <style>
+                  <class name="title"/>
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkText" id="input">
+                <property name="placeholder_text">ID here</property>
+                <property name="max_length">6</property>
+                <property name="propagate_text_width">false</property>
+                <property name="xalign">0.5</property>
+                <style>
+                  <class name="inputBar"/>
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="button">
+                <property name="halign">GTK_ALIGN_CENTER</property>
+                <property name="label">Search Product</property>
+                <style>
+                  <class name="buttonInput"/>
+                </style>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </property>
+  </template>
+</interface>
