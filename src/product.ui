@@ -73,8 +73,96 @@
                   </object>
                 </child>
                 <layout>
-                  <property name="column">3</property>
+                  <property name="column">2</property>
                   <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label">Tanggal Mulai</property>
+                    <style>
+                      <class name="data-title" />
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="tanggal_mulai">
+                    <property name="label">hallo</property>
+                  </object>
+                </child>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label">Tanggal Kemas</property>
+                    <style>
+                      <class name="data-title" />
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="tanggal_kemas">
+                    <property name="label">hallo</property>
+                  </object>
+                </child>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label">Tanggal Potong</property>
+                    <style>
+                      <class name="data-title" />
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="tanggal_potong">
+                    <property name="label">hallo</property>
+                  </object>
+                </child>
+                <layout>
+                  <property name="column">2</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label">Peternak</property>
+                    <style>
+                      <class name="data-title" />
+                    </style>
+                  </object>
+                </child>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="row">2</property>
+                  <property name="row-span">3</property>
                 </layout>
               </object>
             </child>

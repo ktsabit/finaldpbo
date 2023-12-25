@@ -7,6 +7,12 @@ namespace Finaldpbo {
         private unowned Gtk.Label jenis_ternak;
         [GtkChild]
         private unowned Gtk.Label spesies;
+        [GtkChild]
+        private unowned Gtk.Label tanggal_mulai;
+        [GtkChild]
+        private unowned Gtk.Label tanggal_kemas;
+        [GtkChild]
+        private unowned Gtk.Label tanggal_potong;
 
         construct {
             var css_provider = new Gtk.CssProvider ();
@@ -35,6 +41,9 @@ namespace Finaldpbo {
             nama.set_text (batch.nama);
             jenis_ternak.set_text (batch.jenis_ternak);
             spesies.set_text (batch.spesies);
+            tanggal_mulai.set_text (batch.tgl_mulai);
+            tanggal_kemas.set_text (batch.tgl_kemas);
+            tanggal_potong.set_text (batch.tgl_potong);
         }
     }
 }
