@@ -16,8 +16,7 @@ namespace Finaldpbo {
 
         construct {
             var css_provider = new Gtk.CssProvider ();
-            string path = "/home/kadafi/Projects/dpbo/finaldpbo/src/style.css";
-            css_provider.load_from_path (path);
+            css_provider.load_from_resource ("/com/ktsabit/finaldpbo/style.css");
             Gtk.StyleContext.add_provider_for_display (Gdk.Display.get_default (), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER);
         }
 
