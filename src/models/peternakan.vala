@@ -2,9 +2,9 @@
 
 public class Peternakan {
 
-    string nama;
-    string lokasi;
-    string id;
+    string? nama;
+    string? lokasi;
+    string? id;
 
     public Peternakan(Json.Object? json) {
         if (json == null) {

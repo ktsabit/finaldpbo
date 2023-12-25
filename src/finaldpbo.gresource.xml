@@ -3,6 +3,7 @@
   <gresource prefix="/com/ktsabit/finaldpbo">
     <file preprocess="xml-stripblanks">window.ui</file>
     <file preprocess="xml-stripblanks">input.ui</file>
+    <file preprocess="xml-stripblanks">detail.ui</file>
     <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
   </gresource>
 </gresources>

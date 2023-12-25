@@ -21,8 +21,6 @@
 namespace Finaldpbo {
     [GtkTemplate (ui = "/com/ktsabit/finaldpbo/window.ui")]
     public class Window : Gtk.ApplicationWindow {
-        //  private unowned Gtk.ScrolledWindow mainGrid;
-        //  private unowned Gtk.Button buttonInput;
         [GtkChild]
         private unowned Gtk.Label label;
 
@@ -49,7 +47,11 @@ namespace Finaldpbo {
             
             Batch batch = jsonParse (res);
 
-            label.set_text ("jenis ternak : " + batch.jenis_ternak);
+            string sad = "";
+            foreach (string item in batch.images){
+                sad += item + "\n";
+            }
+            label.set_text ("images : " + sad);
         }
 
         public Window (Gtk.Application app) {

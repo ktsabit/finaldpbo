@@ -8,6 +8,7 @@ finaldpbo_sources = [
   'models/peternakan.vala',
   'models/batch.vala',
   'utils/jsonParser.vala',
+  'detail_window.vala',
 ]
 
 finaldpbo_deps = [

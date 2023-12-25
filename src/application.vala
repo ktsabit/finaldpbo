@@ -38,7 +38,7 @@ namespace Finaldpbo {
             base.activate ();
             var win = this.active_window;
             if (win == null) {
-                win = new Finaldpbo.Window (this);
+                win = new Finaldpbo.Window  (this);
             }
             win.present ();
         }

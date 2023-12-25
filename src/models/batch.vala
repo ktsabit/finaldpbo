@@ -1,15 +1,16 @@
 public class Batch {
 
-    public string id;
-    public string nama;
-    public string jenis_ternak;
-    public string spesies;
-    public string tgl_mulai;
-    public string tgl_kemas;
-    public string tgl_potong;
-    public double berat_rt_sample;
-    public Distributor distributor;
-    public Peternakan peternak;
+    public string? id;
+    public string? nama;
+    public string? jenis_ternak;
+    public string? spesies;
+    public string? tgl_mulai;
+    public string? tgl_kemas;
+    public string? tgl_potong;
+    public double? berat_rt_sample;
+    public Distributor? distributor;
+    public Peternakan? peternak;
+    public Gee.ArrayList<string>? images;
 
     public Batch(Json.Object? json) {
         if (json == null) {
@@ -25,6 +26,12 @@ public class Batch {
         this.berat_rt_sample = json.get_double_member ("berat_rt_sample");
         this.distributor = new Distributor (json.get_object_member ("distributor"));
         this.peternak = new Peternakan (json.get_object_member ("peternak"));
+        if (json.get_array_member ("images") != null) {
+            this.images = new Gee.ArrayList<string> ();
+            foreach (var item in json.get_array_member ("images").get_elements()) {
+                this.images.add (item.get_object ().get_string_member ("filename"));
+            }
+        }
 
     }
 
