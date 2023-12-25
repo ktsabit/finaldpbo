@@ -2,12 +2,12 @@ finaldpbo_sources = [
   'main.vala',
   'application.vala',
   'window.vala',
-  'httputils.vala',
+  'utils/httputils.vala',
   'input_window.vala',
-  'distributor.vala',
-  'peternakan.vala',
-  'batch.vala',
-  'jsonParser.vala',
+  'models/distributor.vala',
+  'models/peternakan.vala',
+  'models/batch.vala',
+  'utils/jsonParser.vala',
 ]
 
 finaldpbo_deps = [

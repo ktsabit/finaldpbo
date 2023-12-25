@@ -27,7 +27,6 @@ namespace Finaldpbo {
         private unowned Gtk.Label label;
 
         construct {
-
             var css_provider = new Gtk.CssProvider ();
             string path = "/home/juned/Ned Files/Projects/finaldpbo/src/style.css";
             css_provider.load_from_path (path);
