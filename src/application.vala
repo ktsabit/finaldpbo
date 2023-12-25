@@ -21,7 +21,7 @@
 namespace Finaldpbo {
     public class Application : Gtk.Application {
         public Application () {
-            Object (application_id: "com.ktsabit.finaldpbo", flags: ApplicationFlags.DEFAULT_FLAGS);
+            Object (application_id: "com.ktsabit.finaldpbo", flags: ApplicationFlags.FLAGS_NONE);
         }
 
         construct {

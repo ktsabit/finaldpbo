@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0" />
+  <template class="FinaldpboWindow" parent="GtkApplicationWindow">
+    <property name="default-width">600</property>
+    <property name="default-height">300</property>
+    <property name="titlebar">
+      <object class="GtkHeaderBar" id="header_bar">
+        <child type="end">
+          <object class="GtkMenuButton">
+            <property name="primary">True</property>
+            <property name="icon-name">open-menu-symbolic</property>
+            <property name="tooltip-text" translatable="yes">Menu</property>
+            <property name="menu-model">primary_menu</property>
+          </object>
+        </child>
+      </object>
+    </property>
+    <property name="child">
+      <object class="GtkStack" id="pages">
+        <!-- Register Page Start -->
+        <child>
+          <object class="GtkStackPage" id="register_page">
+            <property name="name">register</property>
+            <property name="title">Register</property>
+            <property name="child">
+              <object class="GtkBox" id="register_label">
+                <property name="orientation">vertical</property>
+                <property name="valign">GTK_ALIGN_CENTER</property>
+                <property name="spacing">10</property>
+                <!-- <property name="homogeneous">true</property> -->
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label">Register</property>
+                    <style>
+                      <class name="title-1" />
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="register_username">
+                    <property name="placeholder-text">Username</property>
+                    <property name="margin-start">200</property>
+                    <property name="margin-end">200</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="register_password">
+                    <property name="placeholder-text">password</property>
+                    <property name="visibility">false</property>
+                    <property name="margin-start">200</property>
+                    <property name="margin-end">200</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton" id="register_btn">
+                    <property name="label">Register</property>
+                    <property name="margin-start">200</property>
+                    <property name="margin-end">200</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="orientation">horizontal</property>
+                    <property name="halign">GTK_ALIGN_CENTER</property>
+                    <child>
+                      <object class="GtkLabel" id="to_login">
+                        <property name="label">Sudah punya akun?</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="to_login_btn">
+                        <property name="label">Login</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </property>
+          </object>
+        </child>
+        <!-- Register Page End -->
+
+        <!-- Login Page Start -->
+        <child>
+          <object class="GtkStackPage" id="login_page">
+            <property name="name">login</property>
+            <property name="title">Login</property>
+            <property name="child">
+              <object class="GtkBox" id="login_label">
+                <property name="orientation">vertical</property>
+                <property name="valign">GTK_ALIGN_CENTER</property>
+                <property name="spacing">10</property>
+                <!-- <property name="homogeneous">true</property> -->
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label">Login</property>
+                    <style>
+                      <class name="title-1" />
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="login_username">
+                    <property name="placeholder-text">Username</property>
+                    <property name="margin-start">200</property>
+                    <property name="margin-end">200</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="login_password">
+                    <property name="placeholder-text">password</property>
+                    <property name="visibility">false</property>
+                    <property name="margin-start">200</property>
+                    <property name="margin-end">200</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton" id="login_btn">
+                    <property name="label">Login</property>
+                    <property name="margin-start">200</property>
+                    <property name="margin-end">200</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="orientation">horizontal</property>
+                    <property name="halign">GTK_ALIGN_CENTER</property>
+                    <child>
+                      <object class="GtkLabel" id="to_register">
+                        <property name="label">Belum punya akun?</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="to_register_btn">
+                        <property name="label">Register</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </property>
+          </object>
+        </child>
+        <!-- Login Page End -->
+
+        <child>
+          <object class="GtkStackPage" id="home_page">
+            <property name="name">home</property>
+            <property name="title">Home</property>
+            <property name="child">
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <property name="valign">GTK_ALIGN_CENTER</property>
+                <property name="spacing">10</property>
+                <!-- <property name="homogeneous">true</property> -->
+
+                <child>
+                  <object class="GtkLabel" id="label">
+                    <property name="label">Hello, World!</property>
+                    <style>
+                      <class name="title-1" />
+                    </style>
+                  </object>
+                </child>
+              </object>
+            </property>
+          </object>
+        </child>
+      </object>
+    </property>
+  </template>
+  <menu id="primary_menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Preferences</attribute>
+        <attribute name="action">app.preferences</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
+        <attribute name="action">win.show-help-overlay</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_About Dpbo-final</attribute>
+        <attribute name="action">app.about</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>
+
