@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=finaldpbo
+Exec=finaldpbo
+Icon=com.ktsabit.finaldpbo
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true

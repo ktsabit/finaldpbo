@@ -1,0 +1,6 @@
+data/com.ktsabit.finaldpbo.desktop.in
+data/com.ktsabit.finaldpbo.metainfo.xml.in
+data/com.ktsabit.finaldpbo.gschema.xml
+src/main.vala
+src/window.vala
+src/window.ui
