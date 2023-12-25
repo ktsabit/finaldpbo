@@ -11,8 +11,10 @@ public class Batch {
     public Distributor distributor;
     public Peternakan peternak;
 
-    public Batch(Json.Object json) {
-        
+    public Batch(Json.Object? json) {
+        if (json == null) {
+            return;
+        }
         this.id = json.get_string_member ("id");
         this.nama = json.get_string_member ("nama");
         this.jenis_ternak = json.get_string_member ("jenis_ternak");

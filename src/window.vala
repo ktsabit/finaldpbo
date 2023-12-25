@@ -50,7 +50,7 @@ namespace Finaldpbo {
             
             Batch batch = jsonParse (res);
 
-            label.set_label ("id: " + batch.id);
+            label.set_text ("jenis ternak : " + batch.jenis_ternak);
         }
 
         public Window (Gtk.Application app) {
