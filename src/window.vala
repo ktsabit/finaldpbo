@@ -24,6 +24,24 @@ namespace Finaldpbo {
         [GtkChild]
         private unowned Gtk.Label label;
 
+        construct {
+            Json.Builder builder = new Json.Builder ();
+            builder.begin_object ();
+            builder.set_member_name ("id");
+            builder.add_string_value ("Z0aZpw");
+            //  builder.set_member_name ("password");
+            //  builder.add_string_value ("kaisan");
+            builder.end_object ();
+        
+            Json.Generator generator = new Json.Generator ();
+            Json.Node root = builder.get_root ();
+            generator.set_root (root);
+            string str = generator.to_data (null);
+        
+            string res = sendHTTPrequest (str, "http://angkit.ktsabit.com/getBatch", "POST", "application/json");
+            label.set_label (res);
+        }
+
         public Window (Gtk.Application app) {
             Object (application: app);
         }
