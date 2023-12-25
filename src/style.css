@@ -15,3 +15,12 @@
 .buttonInput {
     min-width: 1rem;
 }
+
+.swin {
+  margin: 30px;
+}
+
+.data-title {
+  font-size: 20px;
+  font-weight: bold;
+}
