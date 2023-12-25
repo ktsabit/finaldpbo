@@ -4,6 +4,10 @@ finaldpbo_sources = [
   'window.vala',
   'httputils.vala',
   'input_window.vala',
+  'distributor.vala',
+  'peternakan.vala',
+  'batch.vala',
+  'jsonParser.vala',
 ]
 
 finaldpbo_deps = [

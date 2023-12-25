@@ -21,9 +21,10 @@
 namespace Finaldpbo {
     [GtkTemplate (ui = "/com/ktsabit/finaldpbo/window.ui")]
     public class Window : Gtk.ApplicationWindow {
-        //  [GtkChild]
         //  private unowned Gtk.ScrolledWindow mainGrid;
         //  private unowned Gtk.Button buttonInput;
+        [GtkChild]
+        private unowned Gtk.Label label;
 
         construct {
 
@@ -46,20 +47,10 @@ namespace Finaldpbo {
             string str = generator.to_data (null);
         
             string res = sendHTTPrequest (str, "http://angkit.ktsabit.com/getBatch", "POST", "application/json");
-            //  label.set_label (res);
-            var parser = new Json.Parser ();
-            try {
-                parser.load_from_data (res, -1);
-                var root_object = parser.get_root ().get_object ();
-                var response = root_object.get_object_member ("data");
-                var results = response.get_string_member ("id");
+            
+            Batch batch = jsonParse (res);
 
-            }
-            catch {
-                //  label.set_label ("error");
-                print("sad");
-            }
-
+            label.set_label ("id: " + batch.id);
         }
 
         public Window (Gtk.Application app) {
