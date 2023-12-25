@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+    <requires lib="gtk" version="4.0"/>
+    <template class="FinaldpboDetail_Window" parent="GtkApplicationWindow">
+        <property name="default-width">600</property>
+        <property name="default-height">300</property>
+        <property name="child"> 
+            <object class="GtkBox" id="box1">
+                <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
+                <child>
+                    <object class="GtkImage">
+                        <property name="file">/home/juned/Ned Files/Projects/finaldpbo/src/angkit.png</property>
+                        <property name="pixel-size">160</property>
+                    </object>
+                </child>
+                <child>
+                    <object class="GtkGrid" id="grid1">
+                        <property name="column-homogeneous">true</property>
+                        <property name="row-homogeneous">true</property>
+                        <child>
+                            <object class="GtkLabel" id="title1">
+                                <property name="label">Title 1</property>
+                                <property name="name">title</property>
+                                <layout>
+                                    <property name="column">0</property>
+                                    <property name="row">0</property>
+                                </layout>
+                            </object>
+                        </child>
+                        <child>
+                            <object class="GtkLabel" id="label1">
+                                <property name="label">Random Word 1</property>
+                                <property name="name">detail</property>
+                                <layout>
+                                    <property name="column">0</property>
+                                    <property name="row">1</property>
+                                </layout>
+                            </object>
+                        </child>
+                        <child>
+                            <object class="GtkLabel" id="title2">
+                                <property name="label">Title 2</property>
+                                <property name="name">title</property>
+                                <layout>
+                                    <property name="column">1</property>
+                                    <property name="row">0</property>
+                                </layout>
+                            </object>
+                        </child>
+                        <child>
+                            <object class="GtkLabel" id="label2">
+                                <property name="label">Random Word 2</property>
+                                <property name="name">detail</property>
+                                <layout>
+                                    <property name="column">1</property>
+                                    <property name="row">1</property>
+                                </layout>
+                            </object>
+                        </child>
+                        <child>
+                            <object class="GtkLabel" id="title3">
+                                <property name="label">Title 3</property>
+                                <property name="name">title</property>
+                                <layout>
+                                    <property name="column">2</property>
+                                    <property name="row">0</property>
+                                </layout>
+                            </object>
+                        </child>
+                        <child>
+                            <object class="GtkLabel" id="label3">
+                                <property name="label">Random Word 3</property>
+                                <property name="name">detail</property>
+                                <layout>
+                                    <property name="column">2</property>
+                                    <property name="row">1</property>
+                                </layout>
+                            </object>
+                        </child>
+                        <child>
+                            <object class="GtkLabel" id="title4">
+                                <property name="label">Title 4</property>
+                                <property name="name">title</property>
+                                <layout>
+                                    <property name="column">0</property>
+                                    <property name="row">2</property>
+                                </layout>
+                            </object>
+                        </child>
+                        <child>
+                            <object class="GtkLabel" id="label4">
+                                <property name="label">Random Word 4</property>
+                                <property name="name">detail</property>
+                                <layout>
+                                    <property name="column">0</property>
+                                    <property name="row">3</property>
+                                </layout>
+                            </object>
+                        </child>
+                        <child>
+                            <object class="GtkLabel" id="title5">
+                                <property name="label">Title 5</property>
+                                <property name="name">title</property>
+                                <layout>
+                                    <property name="column">1</property>
+                                    <property name="row">2</property>
+                                </layout>
+                            </object>
+                        </child>
+                        <child>
+                            <object class="GtkLabel" id="label5">
+                                <property name="label">Random Word 5</property>
+                                <property name="name">detail</property>
+                                <layout>
+                                    <property name="column">1</property>
+                                    <property name="row">3</property>
+                                </layout>
+                            </object>
+                        </child>
+                        <child>
+                            <object class="GtkLabel" id="title6">
+                                <property name="label">Title 6</property>
+                                <property name="name">title</property>
+                                <layout>
+                                    <property name="column">2</property>
+                                    <property name="row">2</property>
+                                </layout>
+                            </object>
+                        </child>
+                        <child>
+                            <object class="GtkLabel" id="label6">
+                                <property name="label">Random Word 6</property>
+                                <property name="name">detail</property>
+                                <layout>
+                                    <property name="column">2</property>
+                                    <property name="row">3</property>
+                                </layout>
+                            </object>
+                        </child>
+                    </object>
+                </child>
+            </object>
+        </property>
+    </template>
+</interface>
