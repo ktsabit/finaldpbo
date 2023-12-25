@@ -21,10 +21,17 @@
 namespace Finaldpbo {
     [GtkTemplate (ui = "/com/ktsabit/finaldpbo/window.ui")]
     public class Window : Gtk.ApplicationWindow {
-        [GtkChild]
-        private unowned Gtk.Label label;
+        //  [GtkChild]
+        //  private unowned Gtk.ScrolledWindow mainGrid;
+        //  private unowned Gtk.Button buttonInput;
 
         construct {
+
+            var css_provider = new Gtk.CssProvider ();
+            string path = "/home/juned/Ned Files/Projects/finaldpbo/src/style.css";
+            css_provider.load_from_path (path);
+            Gtk.StyleContext.add_provider_for_display (Gdk.Display.get_default (), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER);
+
             Json.Builder builder = new Json.Builder ();
             builder.begin_object ();
             builder.set_member_name ("id");
@@ -39,7 +46,20 @@ namespace Finaldpbo {
             string str = generator.to_data (null);
         
             string res = sendHTTPrequest (str, "http://angkit.ktsabit.com/getBatch", "POST", "application/json");
-            label.set_label (res);
+            //  label.set_label (res);
+            var parser = new Json.Parser ();
+            try {
+                parser.load_from_data (res, -1);
+                var root_object = parser.get_root ().get_object ();
+                var response = root_object.get_object_member ("data");
+                var results = response.get_string_member ("id");
+
+            }
+            catch {
+                //  label.set_label ("error");
+                print("sad");
+            }
+
         }
 
         public Window (Gtk.Application app) {
