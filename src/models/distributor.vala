@@ -2,9 +2,9 @@
 
 public class Distributor {
     
-    string nama;
-    string lokasi;
-    string id;
+    public string nama;
+    public string lokasi;
+    public string id;
 
     public Distributor(Json.Object? json) {
         if (json == null) {
