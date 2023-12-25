@@ -19,6 +19,24 @@
  */
 
 int main (string[] args) {
+
+    //  Json.Builder builder = new Json.Builder ();
+    //  builder.begin_object ();
+    //  builder.set_member_name ("id");
+    //  builder.add_string_value ("Z0aZpw");
+    //  builder.end_object ();
+
+    //  Json.Generator generator = new Json.Generator ();
+    //  Json.Node root = builder.get_root ();
+    //  generator.set_root (root);
+    //  string str = generator.to_data (null);
+    //  string res = sendHTTPrequest (str, "http://angkit.ktsabit.com/getBatch", "POST", "application/json");
+    //  //  print(res);
+    //  Batch batch = jsonParse (res);
+    //  foreach (var img in batch.images) print(img);
+    makeDataDir ();
     var app = new Finaldpbo.Application ();
+    //  getImage ("bc16ddc4f53c429c89fd58ed08076734.png");
     return app.run (args);
+    //  return 0;
 }
