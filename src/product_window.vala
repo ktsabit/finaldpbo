@@ -13,6 +13,9 @@ namespace Finaldpbo {
         private unowned Gtk.Label tanggal_kemas;
         [GtkChild]
         private unowned Gtk.Label tanggal_potong;
+        [GtkChild]
+        private unowned Gtk.Image img;
+
 
         construct {
             var css_provider = new Gtk.CssProvider ();
@@ -27,7 +30,6 @@ namespace Finaldpbo {
             builder.begin_object ();
             builder.set_member_name ("id");
             builder.add_string_value (id);
-            // builder.add_string_value ("Z0aZpw");
             builder.end_object ();
         
             Json.Generator generator = new Json.Generator ();
@@ -43,6 +45,9 @@ namespace Finaldpbo {
             tanggal_mulai.set_text (batch.tgl_mulai);
             tanggal_kemas.set_text (batch.tgl_kemas);
             tanggal_potong.set_text (batch.tgl_potong);
+            File imageFile = getImage (batch.images.get (0));
+            img.set_from_file (imageFile.get_path ());
+            img.height_request = 500;
         }
     }
 }

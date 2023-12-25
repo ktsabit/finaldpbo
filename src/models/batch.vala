@@ -10,10 +10,17 @@ public class Batch {
     public double berat_rt_sample;
     public Distributor distributor;
     public Peternakan peternak;
+    public Gee.List<string>  images;
 
     public Batch(Json.Object? json) {
         if (json == null) {
             return;
+        }
+        var images = json.get_array_member ("images");
+        this.images = new Gee.ArrayList<string>();
+        for (int i = 0; i < images.get_length (); i++){
+            this.images.add(images.get_object_element (i).get_string_member ("filename"));
+            
         }
         this.id = json.get_string_member ("id");
         this.nama = json.get_string_member ("nama");
