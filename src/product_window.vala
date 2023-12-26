@@ -32,6 +32,14 @@ namespace Finaldpbo {
         public Product_Window (Gtk.Application app, string id) {
             Object (application: app);
 
+            if (id == "bad input") {
+                mainBox.unparent ();
+                Gtk.Label label = new Gtk.Label ("ID harus 6 karakter alfanumerik");
+                this.set_child (label);
+                this.set_size_request (200, 130);
+                return;
+            }
+
             Json.Builder builder = new Json.Builder ();
             builder.begin_object ();
             builder.set_member_name ("id");
@@ -48,7 +56,6 @@ namespace Finaldpbo {
             Batch batch = jsonParse (res);
 
             if (batch.id == null) {
-                print ("null");
                 mainBox.unparent ();
                 Gtk.Label label = new Gtk.Label ("Batch tidak ditemukan");
                 this.set_child (label);

@@ -22,9 +22,9 @@ namespace Finaldpbo {
         }
 
         void changePage() {
-
-            if (!/^[A-Z0-9]{6}$/i.match (input.text)) return;
-            Gtk.Window product_window = new Product_Window (this.app, input.text);
+            string text = input.text;
+            if (!/^[A-Z0-9]{6}$/i.match (input.text)) text = "bad input";
+            Gtk.Window product_window = new Product_Window (this.app, text);
             product_window.title = "Product data";
             product_window.present ();
 
