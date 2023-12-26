@@ -5,10 +5,10 @@
     <property name="default-width">600</property>
     <property name="default-height">300</property>
     <property name="child">
-      <object class="GtkScrolledWindow" id="mainGrid">
+      <!-- <object class="GtkScrolledWindow" id="mainGrid">
       <property name="name">mainScreen</property>
 
-        <child>
+        <child> -->
           <object class="GtkBox" id="mainBox">
             <property name="orientation">vertical</property>
             <property name="baseline-position">GTK_BASELINE_POSITION_CENTER</property>
@@ -53,8 +53,8 @@
               </object>
             </child>
           </object>
-        </child>
-      </object>
+        <!-- </child>
+      </object> -->
     </property>
   </template>
 </interface>
