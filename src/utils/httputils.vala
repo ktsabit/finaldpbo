@@ -9,7 +9,6 @@ Bytes strToBytes (string str) {
 }
 
 void makeDataDir () {
-
     File dataDir = File.new_for_path ("%s/angkit".printf (Environment.get_user_data_dir ()));
     if (dataDir.query_exists ()) return;
     try {
@@ -21,7 +20,6 @@ void makeDataDir () {
 
 
 string sendHTTPrequest (string data, string url, string method, string ctype) {
-
     Soup.Message msg = new Soup.Message (method, url);
     Soup.Session session = new Soup.Session ();
     msg.set_request_body_from_bytes (ctype, strToBytes (data));
@@ -52,7 +50,6 @@ void saveImage (string path) {
 
     var image_data = response.get_data ();
     string filepath = "%s/angkit/%s".printf (Environment.get_user_data_dir(), path);
-    print(filepath);
     File local_file = File.new_for_path(filepath);
     try {
         FileOutputStream fos = local_file.replace (null, false, FileCreateFlags.NONE);
