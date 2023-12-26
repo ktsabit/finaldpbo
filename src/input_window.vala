@@ -18,12 +18,13 @@ namespace Finaldpbo {
         public Input_Window (Gtk.Application app) {
             Object (application: app);
             button.clicked.connect (changePage);
+            this.app = app;
         }
 
         void changePage() {
 
             if (!/^[A-Z0-9]{6}$/i.match (input.text)) return;
-            Gtk.Window product_window = new Product_Window (app, input.text);
+            Gtk.Window product_window = new Product_Window (this.app, input.text);
             product_window.title = "Product data";
             product_window.present ();
 
