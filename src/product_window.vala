@@ -29,13 +29,12 @@ namespace Finaldpbo {
 
 
         public DisplayBox (Gtk.Application app, string id) {
-            //  Object (application: app);
 
             if (id == "bad input") {
                 Gtk.Label label = new Gtk.Label ("ID harus 6 karakter alfanumerik");
-                this.unparent ();
+                while (this.get_last_child() != null) this.remove (this.get_last_child());
                 this.append (label);
-                this.set_size_request (200, 130);
+                this.set_size_request (5, 5);
                 return;
             }
 
@@ -56,9 +55,9 @@ namespace Finaldpbo {
 
             if (batch.id == null) {
                 Gtk.Label label = new Gtk.Label ("Batch tidak ditemukan");
-                this.unparent ();
+                while (this.get_last_child() != null) this.remove (this.get_last_child());
                 this.append (label);
-                this.set_size_request (200, 130);
+                this.set_size_request (5, 5);
                 return;
             }
 
