@@ -2,8 +2,8 @@
 <interface>
   <requires lib="gtk" version="4.0" />
   <template class="FinaldpboProduct_Window" parent="GtkApplicationWindow">
-    <property name="default-width">1000</property>
-    <property name="default-height">700</property>
+    <!-- <property name="default-width">1000</property>
+    <property name="default-height">700</property> -->
     <property name="title">Detail Batch</property>
     <property name="child">
 

@@ -25,13 +25,10 @@ namespace Finaldpbo {
         private unowned Gtk.Label berat_rata_sample;
         [GtkChild]
         private unowned Gtk.Box imgBox;
+        [GtkChild]
+        private unowned Gtk.Box mainBox;
 
 
-        construct {
-            var css_provider = new Gtk.CssProvider ();
-            css_provider.load_from_resource ("/com/ktsabit/finaldpbo/style.css");
-            Gtk.StyleContext.add_provider_for_display (Gdk.Display.get_default (), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER);
-        }
 
         public Product_Window (Gtk.Application app, string id) {
             Object (application: app);
@@ -48,8 +45,24 @@ namespace Finaldpbo {
             string str = generator.to_data (null);
             string res = sendHTTPrequest (str, "http://angkit.ktsabit.com/getBatch", "POST", "application/json");
             
-            print(res);
+            //  print(res);
+
+
             Batch batch = jsonParse (res);
+
+            if (batch.id == null) {
+                print("null");
+                mainBox.unparent ();
+                Gtk.Label label = new Gtk.Label ("Batch tidak ditemukan");
+                this.set_child (label);
+                this.set_size_request (200, 130);
+
+                //  this.destroy ();
+                return;
+            };
+
+            this.set_size_request (1000, 700);
+
             
             if (batch.id == null) {
                 batch_id.set_text ("null");
