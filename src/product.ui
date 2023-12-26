@@ -1,147 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk" version="4.0" />
-  <template class="FinaldpboProduct_Window" parent="GtkApplicationWindow">
-    <property name="title">Detail Batch</property>
-    <property name="child">
+  <template class="FinaldpboDisplayBox" parent="GtkBox">
+    <property name="orientation">horizontal</property>
+    <property name="name">mainBox</property>
+    <property name="homogeneous">true</property>
+    <property name="spacing">20</property>
+    <child>
+      <object class="GtkGrid" id="mainGrid">
+        <property name="height-request">600</property>
+        <property name="height-request">600</property>
+        <property name="column-homogeneous">true</property>
+        <property name="row-homogeneous">true</property>
+        <child>
+          <object class="GtkLabel">
+            <property name="label">Batch</property>
+            <property name="halign">GTK_ALIGN_CENTER</property>
+            <property name="valign">GTK_ALIGN_CENTER</property>
+            <property name="width-request">200</property>
+            <style>
+              <class name="data-title" />
+            </style>
+            <layout>
+              <property name="column">0</property>
+              <property name="row">0</property>
+              <property name="column-span">3</property>
+            </layout>
+          </object>
+        </child>
 
-          <object class="GtkBox" id="mainBox">
-            <property name="orientation">horizontal</property>
-            <property name="name">mainBox</property>
-            <property name="homogeneous">true</property>
-            <property name="spacing">20</property>
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
             <child>
-              <object class="GtkGrid" id="mainGrid">
-                <property name="height-request">600</property>
-                <property name="height-request">600</property>
-                <property name="column-homogeneous">true</property>
-                <property name="row-homogeneous">true</property>
-                <child>
-                  <object class="GtkLabel">
-                    <property name="label">Batch</property>
-                    <property name="halign">GTK_ALIGN_CENTER</property>
-                    <property name="valign">GTK_ALIGN_CENTER</property>
-                    <property name="width-request">200</property>
-                    <style>
-                      <class name="data-title" />
-                    </style>
-                    <layout>
-                      <property name="column">0</property>
-                      <property name="row">0</property>
-                      <property name="column-span">3</property>
-                    </layout>
-                  </object>
-                </child>
-    
-                <child>
-                  <object class="GtkBox">
-                    <property name="orientation">vertical</property>
-                    <child>
-                      <object class="GtkLabel">
-                        <property name="label">ID</property>
-                        <style>
-                          <class name="data-head" />
-                        </style>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkLabel" id="batch_id">
-                        <property name="label"></property>
-                        <style>
-                          <class name="data" />
-                        </style>
-                      </object>
-                    </child>
-                    <layout>
-                      <property name="column">0</property>
-                      <property name="row">1</property>
-                      <property name="column-span">2</property>
-                    </layout>
-                  </object>
-                </child>
-    
-                <child>
-                  <object class="GtkBox">
-                    <property name="orientation">vertical</property>
-                    <child>
-                      <object class="GtkLabel">
-                        <property name="label">Jenis ternak</property>
-                        <style>
-                          <class name="data-head" />
-                        </style>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkLabel" id="jenis_ternak">
-                        <property name="label"></property>
-                        <style>
-                          <class name="data"/>
-                        </style>
-                      </object>
-                    </child>
-                    <layout>
-                      <property name="column">1</property>
-                      <property name="row">1</property>
-                      <property name="column-span">2</property>
-                    </layout>
-                  </object>
-                </child>
-    
-                <child>
-                  <object class="GtkBox">
-                    <property name="orientation">vertical</property>
-                    <child>
-                      <object class="GtkLabel">
-                        <property name="label">Spesies</property>
-                        <style>
-                          <class name="data-head" />
-                        </style>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkLabel" id="spesies">
-                        <property name="label"></property>
-                        <style>
-                          <class name="data" />
-                        </style>
-                      </object>
-                    </child>
-                    <layout>
-                      <property name="column">0</property>
-                      <property name="row">2</property>
-                      <property name="column-span">2</property>
-                    </layout>
-                  </object>
-                </child>
-    
-                <child>
-                  <object class="GtkBox">
-                    <property name="orientation">vertical</property>
-                    <child>
-                      <object class="GtkLabel">
-                        <property name="label">Berat Rerata</property>
-                        <style>
-                          <class name="data-head" />
-                        </style>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkLabel" id="berat_rata_sample">
-                        <property name="label"></property>
-                        <style>
-                          <class name="data" />
-                        </style>
-                      </object>
-                    </child>
-                    <layout>
-                      <property name="column">1</property>
-                      <property name="row">2</property>
-                      <property name="column-span">2</property>
-                    </layout>
-                  </object>
-                </child>
-    
-                <!-- <child>
+              <object class="GtkLabel">
+                <property name="label">ID</property>
+                <style>
+                  <class name="data-head" />
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel" id="batch_id">
+                <property name="label"></property>
+                <style>
+                  <class name="data" />
+                </style>
+              </object>
+            </child>
+            <layout>
+              <property name="column">0</property>
+              <property name="row">1</property>
+              <property name="column-span">2</property>
+            </layout>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Jenis ternak</property>
+                <style>
+                  <class name="data-head" />
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel" id="jenis_ternak">
+                <property name="label"></property>
+                <style>
+                  <class name="data" />
+                </style>
+              </object>
+            </child>
+            <layout>
+              <property name="column">1</property>
+              <property name="row">1</property>
+              <property name="column-span">2</property>
+            </layout>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Spesies</property>
+                <style>
+                  <class name="data-head" />
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel" id="spesies">
+                <property name="label"></property>
+                <style>
+                  <class name="data" />
+                </style>
+              </object>
+            </child>
+            <layout>
+              <property name="column">0</property>
+              <property name="row">2</property>
+              <property name="column-span">2</property>
+            </layout>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Berat Rerata</property>
+                <style>
+                  <class name="data-head" />
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel" id="berat_rata_sample">
+                <property name="label"></property>
+                <style>
+                  <class name="data" />
+                </style>
+              </object>
+            </child>
+            <layout>
+              <property name="column">1</property>
+              <property name="row">2</property>
+              <property name="column-span">2</property>
+            </layout>
+          </object>
+        </child>
+
+        <!-- <child>
                   <object class="GtkLabel">
                     <property name="label"></property>
                     <style>
@@ -154,103 +150,103 @@
                     </layout>
                   </object>
                 </child> -->
-    
-                <child>
-                  <object class="GtkLabel">
-                    <property name="label">Timeline</property>
-                    <property name="halign">GTK_ALIGN_CENTER</property>
-                    <property name="valign">GTK_ALIGN_CENTER</property>
-                    <property name="width-request">200</property>
-                    <style>
-                      <class name="data-title" />
-                    </style>
-                    <layout>
-                      <property name="column">0</property>
-                      <property name="row">4</property>
-                      <property name="column-span">3</property>
-                    </layout>
-                  </object>
-                </child>
-    
-                <child>
-                  <object class="GtkBox">
-                    <property name="orientation">vertical</property>
-                    <child>
-                      <object class="GtkLabel">
-                        <property name="label">Tanggal Mulai</property>
-                        <style>
-                          <class name="data-head" />
-                        </style>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkLabel" id="tanggal_mulai">
-                        <property name="label"></property>
-                        <style>
-                          <class name="data" />
-                        </style>
-                      </object>
-                    </child>
-                    <layout>
-                      <property name="column">0</property>
-                      <property name="row">5</property>
-                    </layout>
-                  </object>
-                </child>
-    
-                <child>
-                  <object class="GtkBox">
-                    <property name="orientation">vertical</property>
-                    <child>
-                      <object class="GtkLabel">
-                        <property name="label">Tanggal Kemas</property>
-                        <style>
-                          <class name="data-head" />
-                        </style>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkLabel" id="tanggal_kemas">
-                        <property name="label"></property>
-                        <style>
-                          <class name="data" />
-                        </style>
-                      </object>
-                    </child>
-                    <layout>
-                      <property name="column">2</property>
-                      <property name="row">5</property>
-                    </layout>
-                  </object>
-                </child>
-    
-                <child>
-                  <object class="GtkBox">
-                    <property name="orientation">vertical</property>
-                    <child>
-                      <object class="GtkLabel">
-                        <property name="label">Tanggal Potong</property>
-                        <style>
-                          <class name="data-head" />
-                        </style>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkLabel" id="tanggal_potong">
-                        <property name="label"></property>
-                        <style>
-                          <class name="data" />
-                        </style>
-                      </object>
-                    </child>
-                    <layout>
-                      <property name="column">1</property>
-                      <property name="row">5</property>
-                    </layout>
-                  </object>
-                </child>
-    
-                <!-- <child>
+
+        <child>
+          <object class="GtkLabel">
+            <property name="label">Timeline</property>
+            <property name="halign">GTK_ALIGN_CENTER</property>
+            <property name="valign">GTK_ALIGN_CENTER</property>
+            <property name="width-request">200</property>
+            <style>
+              <class name="data-title" />
+            </style>
+            <layout>
+              <property name="column">0</property>
+              <property name="row">4</property>
+              <property name="column-span">3</property>
+            </layout>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Tanggal Mulai</property>
+                <style>
+                  <class name="data-head" />
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel" id="tanggal_mulai">
+                <property name="label"></property>
+                <style>
+                  <class name="data" />
+                </style>
+              </object>
+            </child>
+            <layout>
+              <property name="column">0</property>
+              <property name="row">5</property>
+            </layout>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Tanggal Kemas</property>
+                <style>
+                  <class name="data-head" />
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel" id="tanggal_kemas">
+                <property name="label"></property>
+                <style>
+                  <class name="data" />
+                </style>
+              </object>
+            </child>
+            <layout>
+              <property name="column">2</property>
+              <property name="row">5</property>
+            </layout>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Tanggal Potong</property>
+                <style>
+                  <class name="data-head" />
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel" id="tanggal_potong">
+                <property name="label"></property>
+                <style>
+                  <class name="data" />
+                </style>
+              </object>
+            </child>
+            <layout>
+              <property name="column">1</property>
+              <property name="row">5</property>
+            </layout>
+          </object>
+        </child>
+
+        <!-- <child>
                   <object class="GtkLabel">
                     <property name="label"></property>
                     <style>
@@ -263,79 +259,79 @@
                     </layout>
                   </object>
                 </child> -->
-    
-                <child>
-                  <object class="GtkLabel">
-                    <property name="label">Peternakan</property>
-                    <property name="halign">GTK_ALIGN_CENTER</property>
-                    <property name="valign">GTK_ALIGN_CENTER</property>
-                    <property name="width-request">200</property>
-                    <style>
-                      <class name="data-title" />
-                    </style>
-                    <layout>
-                      <property name="column">0</property>
-                      <property name="row">7</property>
-                      <property name="column-span">3</property>
-                    </layout>
-                  </object>
-                </child>
-    
-                <child>
-                  <object class="GtkBox">
-                    <property name="orientation">vertical</property>
-                    <child>
-                      <object class="GtkLabel">
-                        <property name="label">Nama Peternakan</property>
-                        <style>
-                          <class name="data-head" />
-                        </style>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkLabel" id="peternak">
-                        <property name="label"></property>
-                        <style>
-                          <class name="data" />
-                        </style>
-                      </object>
-                    </child>
-                    <layout>
-                      <property name="column">0</property>
-                      <property name="row">8</property>
-                      <property name="column-span">2</property>
-                    </layout>
-                  </object>
-                </child>
-    
-                <child>
-                  <object class="GtkBox">
-                    <property name="orientation">vertical</property>
-                    <child>
-                      <object class="GtkLabel">
-                        <property name="label">Lokasi Peternakan</property>
-                        <style>
-                          <class name="data-head" />
-                        </style>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkLabel" id="peternak_lokasi">
-                        <property name="label"></property>
-                        <style>
-                          <class name="data" />
-                        </style>
-                      </object>
-                    </child>
-                    <layout>
-                      <property name="column">1</property>
-                      <property name="row">8</property>
-                      <property name="column-span">2</property>
-                    </layout>
-                  </object>
-                </child>
-    
-                <!-- <child>
+
+        <child>
+          <object class="GtkLabel">
+            <property name="label">Peternakan</property>
+            <property name="halign">GTK_ALIGN_CENTER</property>
+            <property name="valign">GTK_ALIGN_CENTER</property>
+            <property name="width-request">200</property>
+            <style>
+              <class name="data-title" />
+            </style>
+            <layout>
+              <property name="column">0</property>
+              <property name="row">7</property>
+              <property name="column-span">3</property>
+            </layout>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Nama Peternakan</property>
+                <style>
+                  <class name="data-head" />
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel" id="peternak">
+                <property name="label"></property>
+                <style>
+                  <class name="data" />
+                </style>
+              </object>
+            </child>
+            <layout>
+              <property name="column">0</property>
+              <property name="row">8</property>
+              <property name="column-span">2</property>
+            </layout>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Lokasi Peternakan</property>
+                <style>
+                  <class name="data-head" />
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel" id="peternak_lokasi">
+                <property name="label"></property>
+                <style>
+                  <class name="data" />
+                </style>
+              </object>
+            </child>
+            <layout>
+              <property name="column">1</property>
+              <property name="row">8</property>
+              <property name="column-span">2</property>
+            </layout>
+          </object>
+        </child>
+
+        <!-- <child>
                   <object class="GtkLabel">
                     <property name="label"></property>
                     <style>
@@ -348,99 +344,97 @@
                     </layout>
                   </object>
                 </child> -->
-    
-                <child>
-                  <object class="GtkLabel">
-                    <property name="label">Distributor</property>
-                    <property name="halign">GTK_ALIGN_CENTER</property>
-                    <property name="valign">GTK_ALIGN_CENTER</property>
-                    <property name="width-request">200</property>
-                    <style>
-                      <class name="data-title" />
-                    </style>
-                    <layout>
-                      <property name="column">0</property>
-                      <property name="row">10</property>
-                      <property name="column-span">3</property>
-                    </layout>
-                  </object>
-                </child>
-    
-                <child>
-                  <object class="GtkBox">
-                    <property name="orientation">vertical</property>
-                    <child>
-                      <object class="GtkLabel">
-                        <property name="label">Nama Distributor</property>
-                        <style>
-                          <class name="data-head" />
-                        </style>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkLabel" id="distributor">
-                        <property name="label"></property>
-                        <style>
-                          <class name="data" />
-                        </style>
-                      </object>
-                    </child>
-                    <layout>
-                      <property name="column">0</property>
-                      <property name="row">11</property>
-                      <property name="column-span">2</property>
-                    </layout>
-                  </object>
-                </child>
-    
-                <child>
-                  <object class="GtkBox">
-                    <property name="orientation">vertical</property>
-                    <child>
-                      <object class="GtkLabel">
-                        <property name="label">Lokasi Distributor</property>
-                        <style>
-                          <class name="data-head" />
-                        </style>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkLabel" id="distributor_lokasi">
-                        <property name="label"></property>
-                        <style>
-                          <class name="data" />
-                        </style>
-                      </object>
-                    </child>
-                    <layout>
-                      <property name="column">1</property>
-                      <property name="row">11</property>
-                      <property name="column-span">2</property>
-                    </layout>
-                  </object>
-                </child>
-              </object>
-            </child>
 
+        <child>
+          <object class="GtkLabel">
+            <property name="label">Distributor</property>
+            <property name="halign">GTK_ALIGN_CENTER</property>
+            <property name="valign">GTK_ALIGN_CENTER</property>
+            <property name="width-request">200</property>
+            <style>
+              <class name="data-title" />
+            </style>
+            <layout>
+              <property name="column">0</property>
+              <property name="row">10</property>
+              <property name="column-span">3</property>
+            </layout>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
             <child>
-              <object class="GtkScrolledWindow">
-                <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
-                <property name="vexpand">true</property>
-                <property name="hexpand">true</property>
-                <child>
-                  <object class="GtkBox" id="imgBox">
-                    <property name="hexpand">true</property>
-                    <property name="halign">GTK_ALIGN_FILL</property>
-                    <property name="valign">GTK_ALIGN_START</property>
-                    <property name="orientation">vertical</property>
-                  </object>
-                </child>
+              <object class="GtkLabel">
+                <property name="label">Nama Distributor</property>
+                <style>
+                  <class name="data-head" />
+                </style>
               </object>
             </child>
-            <style>
-              <class name="swin" />
-            </style>
-          </object> 
-    </property>
+            <child>
+              <object class="GtkLabel" id="distributor">
+                <property name="label"></property>
+                <style>
+                  <class name="data" />
+                </style>
+              </object>
+            </child>
+            <layout>
+              <property name="column">0</property>
+              <property name="row">11</property>
+              <property name="column-span">2</property>
+            </layout>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Lokasi Distributor</property>
+                <style>
+                  <class name="data-head" />
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel" id="distributor_lokasi">
+                <property name="label"></property>
+                <style>
+                  <class name="data" />
+                </style>
+              </object>
+            </child>
+            <layout>
+              <property name="column">1</property>
+              <property name="row">11</property>
+              <property name="column-span">2</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkScrolledWindow">
+        <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+        <property name="vexpand">true</property>
+        <property name="hexpand">true</property>
+        <child>
+          <object class="GtkBox" id="imgBox">
+            <property name="hexpand">true</property>
+            <property name="halign">GTK_ALIGN_FILL</property>
+            <property name="valign">GTK_ALIGN_START</property>
+            <property name="orientation">vertical</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <style>
+      <class name="swin" />
+    </style>
   </template>
+
 </interface>

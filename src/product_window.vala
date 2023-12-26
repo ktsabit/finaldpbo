@@ -1,6 +1,6 @@
 namespace Finaldpbo {
     [GtkTemplate (ui = "/com/ktsabit/finaldpbo/product.ui")]
-    public class Product_Window : Gtk.ApplicationWindow {
+    public class DisplayBox : Gtk.Box {
         [GtkChild]
         private unowned Gtk.Label batch_id;
         [GtkChild]
@@ -25,17 +25,16 @@ namespace Finaldpbo {
         private unowned Gtk.Label berat_rata_sample;
         [GtkChild]
         private unowned Gtk.Box imgBox;
-        [GtkChild]
-        private unowned Gtk.Box mainBox;
 
 
-        public Product_Window (Gtk.Application app, string id) {
-            Object (application: app);
+
+        public DisplayBox (Gtk.Application app, string id) {
+            //  Object (application: app);
 
             if (id == "bad input") {
-                mainBox.unparent ();
                 Gtk.Label label = new Gtk.Label ("ID harus 6 karakter alfanumerik");
-                this.set_child (label);
+                this.unparent ();
+                this.append (label);
                 this.set_size_request (200, 130);
                 return;
             }
@@ -56,13 +55,12 @@ namespace Finaldpbo {
             Batch batch = jsonParse (res);
 
             if (batch.id == null) {
-                mainBox.unparent ();
                 Gtk.Label label = new Gtk.Label ("Batch tidak ditemukan");
-                this.set_child (label);
+                this.unparent ();
+                this.append (label);
                 this.set_size_request (200, 130);
                 return;
             }
-            ;
 
             this.set_size_request (1000, 700);
 
