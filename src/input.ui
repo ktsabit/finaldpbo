@@ -11,6 +11,7 @@
             <property name="orientation">vertical</property>
             <property name="baseline-position">GTK_BASELINE_POSITION_CENTER</property>
             <property name="vexpand">true</property>
+            <property name="name">mainBox</property>
             <property name="valign">GTK_ALIGN_CENTER</property>
             <child>
               <object class="GtkImage">
