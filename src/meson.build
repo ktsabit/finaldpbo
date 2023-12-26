@@ -1,7 +1,6 @@
 finaldpbo_sources = [
   'main.vala',
   'application.vala',
-  'window.vala',
   'utils/httputils.vala',
   'input_window.vala',
   'product_window.vala',

@@ -29,7 +29,6 @@ namespace Finaldpbo {
         private unowned Gtk.Box mainBox;
 
 
-
         public Product_Window (Gtk.Application app, string id) {
             Object (application: app);
 
@@ -38,32 +37,29 @@ namespace Finaldpbo {
             builder.set_member_name ("id");
             builder.add_string_value (id);
             builder.end_object ();
-        
+
             Json.Generator generator = new Json.Generator ();
             Json.Node root = builder.get_root ();
             generator.set_root (root);
             string str = generator.to_data (null);
             string res = sendHTTPrequest (str, "http://angkit.ktsabit.com/getBatch", "POST", "application/json");
-            
-            //  print(res);
 
 
             Batch batch = jsonParse (res);
 
             if (batch.id == null) {
-                print("null");
+                print ("null");
                 mainBox.unparent ();
                 Gtk.Label label = new Gtk.Label ("Batch tidak ditemukan");
                 this.set_child (label);
                 this.set_size_request (200, 130);
-
-                //  this.destroy ();
                 return;
-            };
+            }
+            ;
 
             this.set_size_request (1000, 700);
 
-            
+
             if (batch.id == null) {
                 batch_id.set_text ("null");
             } else {
@@ -124,23 +120,19 @@ namespace Finaldpbo {
                 tanggal_potong.set_text (batch.tgl_potong);
             }
 
-            if (batch.berat_rt_sample.to_string() == null) {
+            if (batch.berat_rt_sample.to_string () == null) {
                 berat_rata_sample.set_text ("null");
             } else {
-                berat_rata_sample.set_text (batch.berat_rt_sample.to_string());
+                berat_rata_sample.set_text (batch.berat_rt_sample.to_string ());
             }
 
             foreach (var image in batch.images) {
-                File imageFile = getImage(image);
-                print("%s\n",imageFile.get_path());
-                print("%s\n",image);
-                Gtk.Image img = new Gtk.Image.from_file (imageFile.get_path());
+                File imageFile = getImage (image);
+                Gtk.Image img = new Gtk.Image.from_file (imageFile.get_path ());
                 img.set_hexpand (true);
                 img.height_request = 340;
                 imgBox.append (img);
-
             }
-
         }
     }
 }

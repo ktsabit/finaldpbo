@@ -2,8 +2,6 @@
 <interface>
   <requires lib="gtk" version="4.0" />
   <template class="FinaldpboProduct_Window" parent="GtkApplicationWindow">
-    <!-- <property name="default-width">1000</property>
-    <property name="default-height">700</property> -->
     <property name="title">Detail Batch</property>
     <property name="child">
 
@@ -11,8 +9,6 @@
             <property name="orientation">horizontal</property>
             <property name="homogeneous">true</property>
             <property name="spacing">20</property>
-            <!-- <property name="hexpand">true</property>
-            <property name="vexpand">true</property> -->
             <child>
               <object class="GtkGrid" id="mainGrid">
                 <property name="height-request">600</property>
