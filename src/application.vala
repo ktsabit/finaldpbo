@@ -23,17 +23,6 @@ namespace Finaldpbo {
         public Application () {
             Object (application_id: "com.ktsabit.finaldpbo", flags: ApplicationFlags.FLAGS_NONE);
         }
-
-        construct {
-            ActionEntry[] action_entries = {
-                { "about", this.on_about_action },
-                { "preferences", this.on_preferences_action },
-                { "quit", this.quit }
-            };
-            this.add_action_entries (action_entries, this);
-            this.set_accels_for_action ("app.quit", {"<primary>q"});
-        }
-
         public override void activate () {
             base.activate ();
             var win = this.active_window;
@@ -41,20 +30,6 @@ namespace Finaldpbo {
                 win = new Finaldpbo.Input_Window (this);
             }
             win.present ();
-        }
-
-        private void on_about_action () {
-            string[] authors = { "debian" };
-            Gtk.show_about_dialog (this.active_window,
-                                   "program-name", "finaldpbo",
-                                   "logo-icon-name", "com.ktsabit.finaldpbo",
-                                   "authors", authors,
-                                   "version", "0.1.0",
-                                   "copyright", "© 2023 debian");
-        }
-
-        private void on_preferences_action () {
-            message ("app.preferences action activated");
         }
     }
 }
