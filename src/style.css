@@ -1,6 +1,15 @@
+#mainBox{
+  background-color: beige;
+}
+
 .inputBar {
     /* color: aqua; */
-    margin-bottom: 5px;
+    margin: 1rem;
+    border: solid 1px;
+    border-color: darkslategrey;
+    border-radius: 10px;
+    font-size: 2rem;
+    color: grey;
 }
 #inp {
     margin-bottom: 5px;
@@ -19,6 +28,9 @@
 
 .buttonInput {
     min-width: 1rem;
+    border-color: dimgray;
+    border-radius: 16px;
+    background-color: antiquewhite;
 }
 
 .swin {
@@ -28,6 +40,9 @@
 .data-title {
   font-size: 20px;
   font-weight: bold;
+  border-bottom: solid 2px;
+  background-color: blanchedalmond;
+  border-radius: 6px;
 }
 
 .data {

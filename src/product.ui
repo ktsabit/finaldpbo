@@ -9,20 +9,22 @@
 
           <object class="GtkBox" id="mainBox">
             <property name="orientation">horizontal</property>
+            <property name="name">mainBox</property>
             <property name="homogeneous">true</property>
             <property name="spacing">20</property>
-            <!-- <property name="hexpand">true</property>
-            <property name="vexpand">true</property> -->
+            <!-- <property name="vexpand">true</property> -->
             <child>
               <object class="GtkGrid" id="mainGrid">
                 <property name="height-request">600</property>
                 <property name="height-request">600</property>
-
                 <property name="column-homogeneous">true</property>
                 <property name="row-homogeneous">true</property>
                 <child>
                   <object class="GtkLabel">
                     <property name="label">Batch</property>
+                    <property name="halign">GTK_ALIGN_CENTER</property>
+                    <property name="valign">GTK_ALIGN_CENTER</property>
+                    <property name="width-request">200</property>
                     <style>
                       <class name="data-title" />
                     </style>
@@ -40,11 +42,14 @@
                     <child>
                       <object class="GtkLabel">
                         <property name="label">ID</property>
+                        <style>
+                          <class name="data-head" />
+                        </style>
                       </object>
                     </child>
                     <child>
                       <object class="GtkLabel" id="batch_id">
-                        <property name="label">hallo</property>
+                        <property name="label"></property>
                         <style>
                           <class name="data" />
                         </style>
@@ -64,13 +69,16 @@
                     <child>
                       <object class="GtkLabel">
                         <property name="label">Jenis ternak</property>
+                        <style>
+                          <class name="data-head" />
+                        </style>
                       </object>
                     </child>
                     <child>
                       <object class="GtkLabel" id="jenis_ternak">
-                        <property name="label">hallo</property>
+                        <property name="label"></property>
                         <style>
-                          <class name="data" />
+                          <class name="data"/>
                         </style>
                       </object>
                     </child>
@@ -88,11 +96,14 @@
                     <child>
                       <object class="GtkLabel">
                         <property name="label">Spesies</property>
+                        <style>
+                          <class name="data-head" />
+                        </style>
                       </object>
                     </child>
                     <child>
                       <object class="GtkLabel" id="spesies">
-                        <property name="label">hallo</property>
+                        <property name="label"></property>
                         <style>
                           <class name="data" />
                         </style>
@@ -112,11 +123,14 @@
                     <child>
                       <object class="GtkLabel">
                         <property name="label">Berat Rerata</property>
+                        <style>
+                          <class name="data-head" />
+                        </style>
                       </object>
                     </child>
                     <child>
                       <object class="GtkLabel" id="berat_rata_sample">
-                        <property name="label">hallo</property>
+                        <property name="label"></property>
                         <style>
                           <class name="data" />
                         </style>
@@ -130,7 +144,7 @@
                   </object>
                 </child>
     
-                <child>
+                <!-- <child>
                   <object class="GtkLabel">
                     <property name="label"></property>
                     <style>
@@ -142,11 +156,14 @@
                       <property name="column-span">3</property>
                     </layout>
                   </object>
-                </child>
+                </child> -->
     
                 <child>
                   <object class="GtkLabel">
                     <property name="label">Timeline</property>
+                    <property name="halign">GTK_ALIGN_CENTER</property>
+                    <property name="valign">GTK_ALIGN_CENTER</property>
+                    <property name="width-request">200</property>
                     <style>
                       <class name="data-title" />
                     </style>
@@ -164,11 +181,14 @@
                     <child>
                       <object class="GtkLabel">
                         <property name="label">Tanggal Mulai</property>
+                        <style>
+                          <class name="data-head" />
+                        </style>
                       </object>
                     </child>
                     <child>
                       <object class="GtkLabel" id="tanggal_mulai">
-                        <property name="label">hallo</property>
+                        <property name="label"></property>
                         <style>
                           <class name="data" />
                         </style>
@@ -187,11 +207,14 @@
                     <child>
                       <object class="GtkLabel">
                         <property name="label">Tanggal Kemas</property>
+                        <style>
+                          <class name="data-head" />
+                        </style>
                       </object>
                     </child>
                     <child>
                       <object class="GtkLabel" id="tanggal_kemas">
-                        <property name="label">hallo</property>
+                        <property name="label"></property>
                         <style>
                           <class name="data" />
                         </style>
@@ -210,11 +233,14 @@
                     <child>
                       <object class="GtkLabel">
                         <property name="label">Tanggal Potong</property>
+                        <style>
+                          <class name="data-head" />
+                        </style>
                       </object>
                     </child>
                     <child>
                       <object class="GtkLabel" id="tanggal_potong">
-                        <property name="label">hallo</property>
+                        <property name="label"></property>
                         <style>
                           <class name="data" />
                         </style>
@@ -227,7 +253,7 @@
                   </object>
                 </child>
     
-                <child>
+                <!-- <child>
                   <object class="GtkLabel">
                     <property name="label"></property>
                     <style>
@@ -239,11 +265,14 @@
                       <property name="column-span">3</property>
                     </layout>
                   </object>
-                </child>
+                </child> -->
     
                 <child>
                   <object class="GtkLabel">
                     <property name="label">Peternakan</property>
+                    <property name="halign">GTK_ALIGN_CENTER</property>
+                    <property name="valign">GTK_ALIGN_CENTER</property>
+                    <property name="width-request">200</property>
                     <style>
                       <class name="data-title" />
                     </style>
@@ -261,11 +290,14 @@
                     <child>
                       <object class="GtkLabel">
                         <property name="label">Nama Peternakan</property>
+                        <style>
+                          <class name="data-head" />
+                        </style>
                       </object>
                     </child>
                     <child>
                       <object class="GtkLabel" id="peternak">
-                        <property name="label">hallo</property>
+                        <property name="label"></property>
                         <style>
                           <class name="data" />
                         </style>
@@ -285,11 +317,14 @@
                     <child>
                       <object class="GtkLabel">
                         <property name="label">Lokasi Peternakan</property>
+                        <style>
+                          <class name="data-head" />
+                        </style>
                       </object>
                     </child>
                     <child>
                       <object class="GtkLabel" id="peternak_lokasi">
-                        <property name="label">hallo</property>
+                        <property name="label"></property>
                         <style>
                           <class name="data" />
                         </style>
@@ -303,7 +338,7 @@
                   </object>
                 </child>
     
-                <child>
+                <!-- <child>
                   <object class="GtkLabel">
                     <property name="label"></property>
                     <style>
@@ -315,11 +350,14 @@
                       <property name="column-span">3</property>
                     </layout>
                   </object>
-                </child>
+                </child> -->
     
                 <child>
                   <object class="GtkLabel">
                     <property name="label">Distributor</property>
+                    <property name="halign">GTK_ALIGN_CENTER</property>
+                    <property name="valign">GTK_ALIGN_CENTER</property>
+                    <property name="width-request">200</property>
                     <style>
                       <class name="data-title" />
                     </style>
@@ -337,11 +375,14 @@
                     <child>
                       <object class="GtkLabel">
                         <property name="label">Nama Distributor</property>
+                        <style>
+                          <class name="data-head" />
+                        </style>
                       </object>
                     </child>
                     <child>
                       <object class="GtkLabel" id="distributor">
-                        <property name="label">hallo</property>
+                        <property name="label"></property>
                         <style>
                           <class name="data" />
                         </style>
@@ -361,11 +402,14 @@
                     <child>
                       <object class="GtkLabel">
                         <property name="label">Lokasi Distributor</property>
+                        <style>
+                          <class name="data-head" />
+                        </style>
                       </object>
                     </child>
                     <child>
                       <object class="GtkLabel" id="distributor_lokasi">
-                        <property name="label">hallo</property>
+                        <property name="label"></property>
                         <style>
                           <class name="data" />
                         </style>
